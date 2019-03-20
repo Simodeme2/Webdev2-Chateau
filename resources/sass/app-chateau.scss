@@ -1,0 +1,16 @@
+// Foundation
+@import '~foundation-sites/scss/foundation';
+@include foundation-everything(true);
+@include foundation-flex-classes;
+@include foundation-flex-grid;
+
+// Pick a date
+@import '~pickadate/lib/themes/default.css';
+@import '~pickadate/lib/themes/default.date.css';
+
+// place own (s)css here
+.top-bar {
+    margin-bottom: 25px;
+}
+
+/* -fingers-crossed- but this should work */
