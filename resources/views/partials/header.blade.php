@@ -3,8 +3,8 @@
     <div class="row">
         <div class="top-bar-left">
             <ul class="menu" role="menubar">
-                <li class="@if(Route::is('home')) is-active @endif" role="menuitem">
-                  <a href="{{ route('home') }}">
+                <li class="@if(Route::is('pages.home')) is-active @endif" role="menuitem">
+                  <a href="{{ route('pages.home') }}">
                     Home
                   </a>
                 </li>

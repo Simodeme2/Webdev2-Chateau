@@ -12,12 +12,11 @@
 */
 
 
-/*
-
 // dynamic routes 
 Route::name('pages.')->group(function () {
-    Route::get('/', 'HomeController@getIndex')->name('home');
+    Route::get('/', 'PagesController@getIndex')->name('home');
 });
+/*
 
 Route::name('clients.')->group(['middleware' => ['auth']], function () {
     Route::get('/klanten', 'ClientController@getIndex')->name('index');
@@ -36,7 +35,7 @@ Route::name('reservations.')->group(function () {
 
 
 // static routes
-Route::get('/', function () {return view('pages.home');})->name('home');
+// Route::get('/', function () {return view('pages.home');})->name('home');
 
 Route::get('/klanten', function () {return view('clients.index');})->name('clients');
 Route::get('/klanten/nieuw', function () {return view('clients.edit');})->name('clients.create');
