@@ -24,7 +24,17 @@ class ClientsController extends Controller
     }
 
     public function postSave() {
-    	dd(request()->all());
+
+    	/*
+    	$id = null;
+    	$postArray = [];
+
+    	Client::updateOrCreate(
+    		$id,
+		    $postArray
+	    );
+    	*/
+
     	// save in database
     }
 }
