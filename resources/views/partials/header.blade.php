@@ -9,12 +9,12 @@
                   </a>
                 </li>
                 <li class="@if(Route::is('clients')) is-active @endif" role="menuitem">
-                  <a href="{{ route('clients') }}">
+                  <a href="{{ route('clients.index') }}">
                     Klanten
                   </a>
                 </li>
                 <li class="@if(Route::is('reservations')) is-active @endif" role="menuitem">
-                  <a href="{{ route('reservations') }}">
+                  <a href="{{ route('reservations.index') }}">
                     Reservaties
                   </a>
                 </li>
