@@ -4,11 +4,15 @@
 <div class="row">
     <div class="medium-12 large-12 columns">
         <h4>Nieuwe klant</h4>
-        <form action="" method="post">
+        <form action="{{ route('clients.save') }}" method="post">
+            @csrf
+
+            <input type="hidden" name="id" value="{{ $client->id }}" />
+
             <div class="row">
                 <div class="medium-4 small-12 columns">
                     <label>Titel</label>
-                    <select name="form[title]">
+                    <select name="title">
                         <option value="mr" selected="selected">Mr.</option>
                         <option value="ms">Mw.</option>
                         <option value="mrs">Juf.</option>
@@ -17,34 +21,34 @@
                 </div>
                 <div class="medium-4 small-6  columns">
                     <label>Voornaam</label>
-                    <input name="form[name]" type="text">
+                    <input name="firstname" type="text">
                 </div>
                 <div class="medium-4 small-6  columns">
                     <label>Achternaam</label>
-                    <input name="form[lastName]" type="text">
+                    <input name="lastname" type="text">
                 </div>
                 <div class="medium-8 small-12  columns">
                     <label>Adres</label>
-                    <input name="form[address]" type="text">
+                    <input name="address" type="text">
                 </div>
                 <div class="medium-4 small-6  columns">
                     <label>Postcode</label>
-                    <input name="form[zipCode]" type="text">
+                    <input name="zipcode" type="text">
                 </div>
                 <div class="medium-4 small-6  columns">
                     <label>Stad</label>
-                    <input name="form[city]" type="text">
+                    <input name="city" type="text">
                 </div>
                 <div class="medium-4 small-12  columns">
                     <label>Provincie</label>
-                    <input name="form[provincie]" type="text">
+                    <input name="province" type="text">
                 </div>
                 <div class="medium-12  columns">
                     <label>E-mail</label>
-                    <input name="form[email]" type="text">
+                    <input name="email" type="text">
                 </div>
                 <div class="medium-12  columns">
-                    <input value="BEWAAR" class="button success hollow" type="submit">
+                    <button class="button success hollow" type="submit">BEWAAR</button>
                 </div>
             </div>
         </form>

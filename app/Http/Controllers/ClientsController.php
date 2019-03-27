@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Client;
 use Illuminate\Http\Request;
 
 class ClientsController extends Controller
@@ -10,13 +11,16 @@ class ClientsController extends Controller
 	    return view('clients.index');
     }
 
-    public function getCreate() {
-	    return view('clients.edit');
+    public function getCreate(Client $client) {
+	    return view('clients.edit')->with(compact('client'));
     }
 
-    public function getEdit() {
+    public function getEdit(Client $client) {
 
-	    return view('clients.edit');
+    	// check if client exists
+    	// if(!$client->id) abort('404');
+
+	    return view('clients.edit')->with(compact('client'));
     }
 
     public function postSave() {
