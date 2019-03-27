@@ -21,7 +21,7 @@ Route::name('clients.')->group(/*['middleware' => ['auth']], */function () {
     Route::get('/klanten', 'ClientsController@getIndex')->name('index');
     Route::get('/klanten/nieuw', 'ClientsController@getCreate')->name('create');
     Route::get('/klanten/bewerk/{clientId}', 'ClientsController@getEdit')->name('edit');
-	Route::post('/klanten/bewaar', 'ClientsController@postSave')->name('save');
+	Route::post('/klanten/bewaar', 'ClientsController@postCreate')->name('save');
 });
 
 Route::name('reservations.')->group(function () {

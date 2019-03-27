@@ -6,7 +6,6 @@
         <h4>Nieuwe klant</h4>
         <form action="{{ route('clients.save') }}" method="post">
             @csrf
-
             <input type="hidden" name="id" value="{{ $client->id }}" />
 
             <div class="row">
