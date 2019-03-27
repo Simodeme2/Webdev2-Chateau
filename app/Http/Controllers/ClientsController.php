@@ -24,7 +24,7 @@ class ClientsController extends Controller
     }
 
     public function postSave() {
-    	dd(\request());
+    	dd(request()->all());
     	// save in database
     }
 }
