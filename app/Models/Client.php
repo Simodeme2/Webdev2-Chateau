@@ -8,6 +8,18 @@ class Client extends Model
 {
     protected $table = 'clients';
 
+    protected $fillable = [
+        'title_id',
+        'first_name',
+        'last_name',
+        'address',
+        'city',
+        'zipcode',
+        'province',
+        'email',
+    ];
+
+
     /**
      * Get the title associated to the client
      */
