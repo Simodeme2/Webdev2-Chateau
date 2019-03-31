@@ -27,7 +27,7 @@ class Client extends Model
         return $this->hasOne('App\Models\Title');
     }
 
-    /** 
+    /**
      * Get the reservations from this client
      */
     public function reservations() {

@@ -66,8 +66,12 @@ class ClientsController extends Controller
 
 		return redirect()->route('clients.index');
     	/*
-    	$id = null;
-    	$postArray = [];
+    	$id = request('id');
+    	$postArray = [
+    		'title_id',
+    		'firstname' => $title,
+
+	    ];
 
     	Client::updateOrCreate(
     		$id,

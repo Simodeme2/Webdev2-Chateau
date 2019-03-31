@@ -23,6 +23,7 @@
 
                 @foreach($clients as $client)
                     <tr>
+<<<<<<< HEAD
                         <td>{{$client->first_name . ' ' . $client->last_name}}</td>
                         <td>{{$client->email}}</td>
                         <td>
@@ -31,6 +32,17 @@
                         </td>
                     </tr>
                 @endforeach
+=======
+                        <td>{{$client->firstname . ' ' . $client->lastname }}</td>
+                        <td>{{$client->email}}</td>
+                        <td>
+                            <a class="hollow button" href="{{ route('clients.edit', $client->id) }}">BEWERK</a>
+                            <a class="hollow button warning" href="{{ route('reservations.create', $client->id) }}">BOEK EEN KAMER</a>
+                        </td>
+                    </tr>
+                @endforeach
+
+>>>>>>> 145086f35f513a84d7bd06cf3d60f3087e6c31cb
             </tbody>
         </table>
     </div>
